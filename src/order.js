@@ -11,34 +11,20 @@ function refundOrder(orderNumber, deliveryOrders) {
   return deliveryOrders
 }
 
-// function listItems(deliveryOrders) {
-//   for (var i = 0; i < deliveryOrders.length; i++) {
-//     deliveryOrders[i].item = items
-//
-//   return items
-// }
-
-// function listItems(deliveryOrders) {
-//   for (var i = 0; i < deliveryOrders.length; i++) {
-//
-//     deliveryOrders.slice(0, i}
-//
-//   return items
-// }
-
 function listItems(deliveryOrders) {
-  var items = deliveryOrders.forEach(function(obj)){
-    a.push(obj.item);
+  var items = [];
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    items.push(deliveryOrders[i].item)
   }
-  return items
+  return items.join(", ")
 }
 
-// function searchOrder(deliveryOrders, item) {
-//   for (var i = 0; i < deliveryOrders.length; i++) {
-//     if(deliverOrders[i].item !== item) {
-//       return false} else {return true}
-//     }
-// }
+function searchOrder(deliveryOrders, item) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if(deliverOrders[i].item !== item) {
+      return false} else {return true}
+    }
+}
 
 module.exports = {
   takeOrder,

@@ -31,6 +31,9 @@ function createRestaurant(name) {
 //         restaurant.menus.breakfast.push(item)
 //   }
 // }
+
+
+//worked on w/ cameron
 // function addMenuItem(name, item) {
 //   if (!name.includes(item)) {
 //     name.menus.type.push(item)
@@ -39,12 +42,13 @@ function createRestaurant(name) {
 //   }
 // }
 
+
+
 function addMenuItem(name, item) {
-  if (!name.menu.menutype.items.includes(item)) {
-    name.menus.type.push(item)
-      } else {
-        restaurant.menus.type.push(item)
+  if (!name.menu[item.type].includes(item.type)) {
+    name.menus[item.type].push(item)
   }
+  return name
 }
 
 // lunchItem.type === restaurant.menus
